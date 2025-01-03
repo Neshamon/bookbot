@@ -14,16 +14,16 @@ def countLetters(list1, list2):
 
 def countChars(corpus):
     charList = list(set([char.lower() for char in corpus if char.lower().isalpha()]))
-    wordList = countWords(corpus)
-    #countList = [sum(list(map(lambda char: word.count(char), charList))) for word in wordList]
-    test = {char: count for char,count in zip(charList, list(map(lambda char: corpus.count(char), charList)))}
-    print(test)
+    countDict = {char: count for char,count in zip(charList, list(map(lambda char: corpus.count(char), charList)))}
+    return countDict
 
 def report(corpus):
     print(f"--- Begin report of frankenstein.txt ---")
     print(f"{len(countWords(corpus))} words found in document\n\n")
-    for letter,count in countChars(corpus):
+    for letter,count in countChars(corpus).items():
         print(f'The "{letter}" character was found {count} times')
+    print(f"--- End report ---")
 
 #countWords(main())
-countChars(main())
+#countChars(main())
+report(main())
