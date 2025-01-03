@@ -28,7 +28,8 @@
 
           shellHook = ''export GOBIN=$HOME/Projects/.go/bin
                         export GOPATH=$HOME/Projects/bookbot/.go/bin
-                        export PATH=$PATH/:$HOME/Projects/bookbot/.go/bin'';
+                        export PATH=$PATH/:$HOME/Projects/bookbot/.go/bin
+                        go telemetry off'';
         };
       });
     };
