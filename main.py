@@ -16,7 +16,8 @@ def countChars(corpus):
     wordList = countWords(corpus)
     #countList = map(lambda x, y: for char in x: char.count(y), wordList, charList)
     charCount = {char: [x.count(char) for x in word] for char,word in zip(charList, wordList)}
-    print(charCount)
+    test = {char: [word.count(char) for word in corpus.split(" ")] for char,word in zip(charList, wordList)}
+    print(test)
 
 def report(corpus):
     print(f"--- Begin report of frankenstein.txt ---")
