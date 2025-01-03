@@ -8,7 +8,7 @@ def countWords(corpus):
     return wordCount
 
 def countChars(corpus):
-    charList = list(set([char.lower() for char in corpus if char.lower().isalpha()]))
+    charList = sorted(list(set([char.lower() for char in corpus if char.lower().isalpha()])))
     countDict = {char: count for char,count in zip(charList, list(map(lambda char: corpus.count(char), charList)))}
     return countDict
 
