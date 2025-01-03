@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "bootdev": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1735594060,
-        "narHash": "sha256-fbDP3hx183po7uKkF0lWOvxA3ncG4CsN3oVncZCYiX4=",
-        "owner": "bootdotdev",
-        "repo": "bootdev",
-        "rev": "631fb9264dfb9ab4dd8f80967de5f346c655c4ec",
-        "type": "github"
-      },
-      "original": {
-        "owner": "bootdotdev",
-        "repo": "bootdev",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1731676054,
@@ -32,7 +16,6 @@
     },
     "root": {
       "inputs": {
-        "bootdev": "bootdev",
         "nixpkgs": "nixpkgs"
       }
     }
