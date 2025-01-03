@@ -1,5 +1,5 @@
 {
-  description = "A Nix-flake-based Python development environment";
+  description = "A Nix-flake-based Bookbot development environment";
 
   inputs = {
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.*.tar.gz";
@@ -26,9 +26,9 @@
               venvShellHook
             ]);
 
-          shellHook = ''export GOBIN=./.go/bin
-                        export GOPATH=./.go/bin
-                        export PATH=$PATH/:./.go/bin'';
+          shellHook = ''export GOBIN=$HOME/Projects/.go/bin
+                        export GOPATH=$HOME/Projects/bookbot/.go/bin
+                        export PATH=$PATH/:$HOME/Projects/bookbot/.go/bin'';
         };
       });
     };
