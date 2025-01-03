@@ -1,7 +1,7 @@
 def main():
     with open("books/frankenstein.txt") as f:
         file_contents = f.read()
-        return file_contents
+        return file_contents, f.name
 
 def countWords(corpus):
     wordCount = corpus.split(" ")
@@ -12,13 +12,12 @@ def countChars(corpus):
     countDict = {char: count for char,count in zip(charList, list(map(lambda char: corpus.count(char), charList)))}
     return countDict
 
-def report(corpus):
-    print(f"--- Begin report of frankenstein.txt ---")
+def report(bookTuple):
+    corpus, bookName = bookTuple
+    print(f"--- Begin report of {bookName} ---")
     print(f"{len(countWords(corpus))} words found in document\n\n")
     for letter,count in countChars(corpus).items():
         print(f'The "{letter}" character was found {count} times')
     print(f"--- End report ---")
 
-#countWords(main())
-#countChars(main())
 report(main())
