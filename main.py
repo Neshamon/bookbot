@@ -7,4 +7,9 @@ def countWords(corpus):
     wordCount = corpus.split(" ")
     print(len(wordCount))
 
-countWords(main())
+def countChars(corpus):
+    charCount = [char.lower() for char in corpus]
+    print(len(charCount))
+
+#countWords(main())
+countChars(main())
