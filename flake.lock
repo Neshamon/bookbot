@@ -1,0 +1,42 @@
+{
+  "nodes": {
+    "bootdev": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1735594060,
+        "narHash": "sha256-fbDP3hx183po7uKkF0lWOvxA3ncG4CsN3oVncZCYiX4=",
+        "owner": "bootdotdev",
+        "repo": "bootdev",
+        "rev": "631fb9264dfb9ab4dd8f80967de5f346c655c4ec",
+        "type": "github"
+      },
+      "original": {
+        "owner": "bootdotdev",
+        "repo": "bootdev",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1731676054,
+        "narHash": "sha256-OZiZ3m8SCMfh3B6bfGC/Bm4x3qc1m2SVEAlkV6iY7Yg=",
+        "rev": "5e4fbfb6b3de1aa2872b76d49fafc942626e2add",
+        "revCount": 708622,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.1.708622%2Brev-5e4fbfb6b3de1aa2872b76d49fafc942626e2add/0193363c-ab27-7bbd-af1d-3e6093ed5e2d/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/NixOS/nixpkgs/0.1.%2A.tar.gz"
+      }
+    },
+    "root": {
+      "inputs": {
+        "bootdev": "bootdev",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
